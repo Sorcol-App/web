@@ -1,6 +1,6 @@
-# Proyecto: Página Web de Enseñanza de Lengua de Señas Colombiana
+# SORCOL: Página Web de Enseñanza de Lengua de Señas Colombiana
 
-Este proyecto tiene como objetivo crear una plataforma para la enseñanza de la lengua de señas de Colombia. Los usuarios podrán registrarse utilizando varias opciones (correo electrónico, Google, Facebook, teléfono), y la aplicación permitirá explorar diferentes módulos con actividades diseñadas para aprender esta lengua. Los usuarios podrán acceder hasta cierto punto sin registrarse y luego se les solicitará crear una cuenta para continuar.
+Este proyecto tiene como objetivo crear una plataforma para la enseñanza de la lengua de señas de Colombia. Los usuarios podrán registrarse utilizando varias opciones (correo electrónico, Google, Facebook, teléfono), y la aplicación permitirá explorar diferentes Niveles, con 5 unidades cada nivel; cada unidad contiene 5 lecciones, cada una con 10 actividades diseñadas para aprender esta lengua. Los usuarios podrán acceder hasta cierto punto sin registrarse y luego se les solicitará crear una cuenta para continuar.
 
 ## Tecnologías Utilizadas
 
@@ -27,8 +27,8 @@ git clone https://github.com/Sorcol-App/web
 Dentro del directorio del proyecto clonado, crea un archivo `.env.local` con las siguientes variables de entorno:
 
 ```bash
-REACT_APP_SUPABASE_URL=<tu_url_de_supabase>
-REACT_APP_SUPABASE_ANON_KEY=<tu_anon_key_de_supabase>
+REACT_APP_SUPABASE_URL=<xxx_url_de_supabase>
+REACT_APP_SUPABASE_ANON_KEY=<xxx_anon_key_de_supabase>
 
 
 ## 3. Instalación de Dependencias
@@ -43,7 +43,7 @@ npm install
 Para iniciar la aplicación en modo de desarrollo, ejecuta:
 
 ```bash
-npm start
+npm run dev
 
 Esto abrirá el proyecto en http://localhost:3000.
 
