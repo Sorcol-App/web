@@ -83,8 +83,6 @@ graph TD
     E -->|Merge| B
 
 ```
-Para más información y documentación detallada del proyecto, visita:  
-[docs.wearesorcol.com](https://docs.wearesorcol.com)
 
 ### Flujo de Trabajo de Tareas en Jira
 En Jira, las tareas se gestionarán según el diagrama, lo que permite un seguimiento claro del estado de cada incidencia desde la creación hasta su finalización.
@@ -102,20 +100,20 @@ Hemos desarrollado **prototipos de alta fidelidad** con Figma para asegurar una 
 
 Accede a los prototipos interactivos en el siguiente enlace:
 
-[Ver Prototipos en Figma](“/Design-System?node-id=1332-29&node-type=canvas&m=dev”)
+[ Ingresa a Figma](“https://www.figma.com/design/lbgyDGM2PJF580cGRg8kRU/”)
 
-### Los prototipos incluyen:
-- **Diseño de la página principal.**  
-- **Flujos de registro e inicio de sesión.**  
-- **Pantallas de perfil y actualización de datos.**  
-- **Interfaces de gestión de contenido.**
+**También podrás visualizar:**
+- Diseño de la página principal.  
+- Flujos de registro e inicio de sesión.  
+- Pantallas de perfil y actualización de datos.  
+- Interfaces de gestión de contenido.
 
-## Documentación del Proyecto
+---
+## Conclusión
+
+**SORCOL** busca reducir la brecha de comunicación entre la comunidad oyente y la comunidad sorda en Colombia. Con esta plataforma, aspiramos a que más personas puedan aprender la Lengua de Señas Colombiana de manera interactiva y accesible.
 
 Para más información y documentación detallada del proyecto, visita:  
 [docs.wearesorcol.com](https://docs.wearesorcol.com)
 
-## Conclusión
-
-**SORCOL** busca reducir la brecha de comunicación entre la comunidad oyente y la comunidad sorda en Colombia. Con esta plataforma, aspiramos a que más personas puedan aprender la Lengua de Señas Colombiana de manera interactiva y accesible.
 **¡Únete a nosotros y sé parte de este cambio positivo!**
