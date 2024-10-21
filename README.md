@@ -1,161 +1,119 @@
-# Supabase React User Management Template
+# SORCOL: Aprende Lengua de Señas Colombiana con Nosotros
 
-This example will set you up for a very common situation: Users can sign up with a magic link and then update their account with public profile information, including a profile image.
+![Welcome Web Sorcol](src/assets/WelcomeWeb.png)
 
-This demonstrates how to use:
+Bienvenido a **SORCOL**, una plataforma web interactiva diseñada para enseñar la **Lengua de Señas Colombiana** (LSC). Nuestro objetivo es ofrecer un espacio accesible y amigable donde cualquier persona pueda aprender LSC a través de niveles estructurados. Cada nivel está compuesto por:
 
-- User signups using Supabase [Auth](https://supabase.com/auth).
-- User avatar images using Supabase [Storage](https://supabase.com/storage).
-- Public profiles restricted with [Policies](https://supabase.com/docs/guides/auth#policies).
-- Frontend using [Create React App](https://reactjs.org/docs/create-a-new-react-app.html).
-- Deployment using [GitHub Actions](https://docs.github.com/en/actions) + hosting using [GitHub Pages](https://pages.github.com/).
+- **5 unidades** por nivel.
+- **5 lecciones** en cada unidad.
+- **10 actividades** por lección, diseñadas para desarrollar habilidades lingüísticas en LSC.
 
-_This example is originally [from the Supabase developers](https://github.com/supabase/supabase/tree/master/examples/user-management/react-user-management), and it was adapted by [**@jlumbroso**](https://github.com/jlumbroso) to be compiled through GitHub Actions and deployed to GitHub Pages, so that it could be made into a [GitHub Template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)._
+Los usuarios podrán explorar algunos contenidos iniciales sin necesidad de registrarse. A partir de cierto punto, se les invitará a crear una cuenta para continuar con su progreso.
 
-## Technologies used
+---
 
-- Frontend:
-  - [Create React App](https://reactjs.org/docs/create-a-new-react-app.html) - a React toolchain.
-  - [Supabase.js](https://supabase.com/docs/library/getting-started) for user management and realtime data syncing.
-- Backend:
-  - [app.supabase.com](https://app.supabase.com/): hosted Postgres database with restful API for usage with Supabase.js.
-- Deployment:
-  - The code is compiled by [GitHub Actions](https://docs.github.com/en/actions) using the continuous integration in `.github/workflows`.
-  - The website is hosted on [GitHub Pages](https://pages.github.com/), in the version available in the branch `gh-pages`.
+## Tecnologías Utilizadas
 
-## Fork your own copy of this project
+### **Frontend**
+- [React](https://reactjs.org/): Para desarrollar la interfaz de usuario interactiva.
+- [Supabase](https://supabase.com/): Para la autenticación de usuarios y almacenamiento de datos.
 
-### 1. Create your own instance of the repository
+### **Backend**
+- [Supabase](https://app.supabase.com/): Base de datos PostgreSQL con API RESTful para gestionar los datos.
 
-The repository `jlumbroso/supabase-react-example` is a template, and you can [create your own repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) from it.
+### **Herramientas adicionales**
+- [Cloudflare](https://www.cloudflare.com/): Gestión de DNS y seguridad web.
+- [Netlify](https://www.netlify.com/): Despliegue y alojamiento del sitio web.
+- [Resend](https://resend.com/): Servicio de envío de correos electrónicos.
 
-Note that the initial repository will contain this project, _but because the secrets are not configured yet, the deployment will either fail outright, or result in a broken website_. This is to be expected and will be resolved in the following steps.
+Nuestro sitio web está disponible en: [wearesorcol.com](https://wearesorcol.com)
 
-### 2. Create a new Supabase project
+---
 
-Sign up to Supabase - [https://app.supabase.com](https://app.supabase.com) and create a new project. Wait for your database to start.
+## Instalación y Configuración
 
-### 3. Run "User Management" Quickstart
+### 1. Clonar el Repositorio
 
-Once your database has started, head over to your project's `SQL Editor` and run the "User Management Starter" quickstart. On the `SQL editor` page, scroll down until you see `User Management Starter: Sets up a public Profiles table which you can access with your API`. Click that, then click `RUN` to execute that query and create a new `profiles` table. When that's finished, head over to the `Table Editor` and see your new `profiles` table.
-
-### 4. Get the URL and Key
-
-Go to the Project Settings (the cog icon), open the API tab, and find your API URL and `anon` key, you'll need these in the next step.
-
-The `anon` key is your client-side API key. It allows "anonymous access" to your database, until the user has logged in. Once they have logged in, the keys will switch to the user's own login token. This enables row level security for your data. Read more about this [below](#postgres-row-level-security).
-
-![image](https://user-images.githubusercontent.com/10214025/88916245-528c2680-d298-11ea-8a71-708f93e1ce4f.png)
-
-**_NOTE_**: The `service_role` key has full access to your data, bypassing any security policies. These keys have to be kept secret and are meant to be used in server environments and never on a client or browser.
-
-### 5. Configure the secrets (and environment variables)
-
-In the previous steps, you created a Supabase project with a database, and you created a `profiles` table. You also got the URL and key for your project. These are now going to be provided as configuration to the project.
-
-For cloud deployment: Create [encrypted secrets for your repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository), using the following names:
-
-- `REACT_APP_SUPABASE_URL` for the URL of your project.
-- `REACT_APP_SUPABASE_ANON_KEY` for the `anon` key of your project.
-
-### 6. Turn on GitHub Pages
-
-In the repository settings, go to the `Pages` section, and [select the `gh-pages` branch as the source for the GitHub Pages website](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch). This will be the branch where the compiled code will be deployed.
-
-### 7. Trigger the first deployment
-
-Now that the secrets are configured, the first deployment will be triggered. This will take a few minutes, and you can check the progress in the `Actions` tab of the repository.
-
-## Local development
-
-If you ever want to locally develop this project, you can do so by following these steps.
-
-### 1. Clone the repository
+Recomendamos clonar el repositorio utilizando **SSH** por razones de seguridad:
 
 ```bash
-git clone https://github.com/<your username>/<your repository name>
+git clone git@github.com:Sorcol-App/web.git
 ```
 
-### 2. Create the `.env` file
+### 2. Configuración del Entorno
 
-Inside the cloned repository, create a file `.env.local` with the following:
+Dentro del directorio del proyecto, crea un archivo .env.local con las variables de entorno necesarias. Estas variables son sensibles y deberán solicitarse al equipo para garantizar una correcta conexión al sistema.
 
-```
-REACT_APP_SUPABASE_URL=
-REACT_APP_SUPABASE_ANON_KEY=
-```
-
-where you complete the values with the URL and key of your project.
-
-### 3. Install the dependencies of the project
-
-This step will require that you have [some recent version of Node.js locally installed](https://nodejs.org/en/).
+### 3. Instalación de Dependencias
+Asegúrate de tener instalada una versión reciente de Node.js. Luego, instala las dependencias ejecutando:
 
 ```bash
 npm install
 ```
 
-### 4. Run the project
+### 4. Ejecutar en Modo Desarrollo
+
+Para iniciar la aplicación en modo desarrollo, usa:
 
 ```bash
-npm run start
+npm run dev
+```
+Esto abrirá el proyecto en: http://localhost:3000.
+
+---
+
+## Flujo de Trabajo 
+
+El flujo de trabajo del proyecto se gestionará de forma paralela utilizando Git para el control de versiones y Jira para la administración de tareas e incidencias. A continuación, se describe cómo funcionará cada flujo:
+
+### 1. Flujo de Trabajo en Git
+Se seguirá un modelo de desarrollo basado en Git Flow, como se muestra en el diagrama.
+
+```mermaid
+
+graph TD
+    A[main] -->|Crear rama| B[develop]
+    B -->|Nueva funcionalidad| C[feature]
+    C -->|Merge| B
+    B -->|Preparar versión| D[release]
+    D -->|Merge| A
+    D -->|Merge| B
+    A -->|Corrección urgente| E[hotfix]
+    E -->|Merge| A
+    E -->|Merge| B
+
 ```
 
-then open your browser to `https://localhost:3000/` and you are ready to go 🚀.
+### Flujo de Trabajo de Tareas en Jira
+En Jira, las tareas se gestionarán según el diagrama, lo que permite un seguimiento claro del estado de cada incidencia desde la creación hasta su finalización.
 
-## Supabase details
+![Diagrama de flujo de trabajo en Jira](src/assets/flujoTrabajoJira.png)
 
-### Postgres Row level security
+Para más información y documentación detallada del proyecto, visita:  
+[docs.wearesorcol.com](https://docs.wearesorcol.com)
 
-This project uses very high-level Authorization using Postgres' Role Level Security.
-When you start a Postgres database on Supabase, we populate it with an `auth` schema, and some helper functions.
-When a user logs in, they are issued a JWT with the role `authenticated` and their UUID.
-We can use these details to provide fine-grained control over what each user can and cannot do.
+---
 
-This is a trimmed-down schema, with the policies:
+## Prototipos
 
-```sql
--- Create a table for Public Profiles
-create table profiles (
-  id uuid references auth.users not null,
-  updated_at timestamp with time zone,
-  username text unique,
-  avatar_url text,
-  website text,
-  primary key (id),
-  unique(username),
-  constraint username_length check (char_length(username) >= 3)
-);
-alter table profiles enable row level security;
-create policy "Public profiles are viewable by everyone."
-  on profiles for select
-  using ( true );
-create policy "Users can insert their own profile."
-  on profiles for insert
-  with check ( auth.uid() = id );
-create policy "Users can update own profile."
-  on profiles for update
-  using ( auth.uid() = id );
--- Set up Realtime!
-begin;
-  drop publication if exists supabase_realtime;
-  create publication supabase_realtime;
-commit;
-alter publication supabase_realtime add table profiles;
--- Set up Storage!
-insert into storage.buckets (id, name)
-values ('avatars', 'avatars');
-create policy "Avatar images are publicly accessible."
-  on storage.objects for select
-  using ( bucket_id = 'avatars' );
-create policy "Anyone can upload an avatar."
-  on storage.objects for insert
-  with check ( bucket_id = 'avatars' );
-```
+Hemos desarrollado **prototipos de alta fidelidad** con Figma para asegurar una experiencia de usuario óptima. Estos prototipos nos ayudan a visualizar la interfaz y el flujo de trabajo antes del desarrollo.
 
-## Authors
+Accede a los prototipos interactivos en el siguiente enlace:
 
-- [Supabase](https://supabase.com)
-- [@jlumbroso](https://www.github.com/jlumbroso)
+[ Ingresa a Figma](“https://www.figma.com/design/lbgyDGM2PJF580cGRg8kRU/”)
 
-Supabase is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase
+**También podrás visualizar:**
+- Diseño de la página principal.  
+- Flujos de registro e inicio de sesión.  
+- Pantallas de perfil y actualización de datos.  
+- Interfaces de gestión de contenido.
+
+---
+## Conclusión
+
+**SORCOL** busca reducir la brecha de comunicación entre la comunidad oyente y la comunidad sorda en Colombia. Con esta plataforma, aspiramos a que más personas puedan aprender la Lengua de Señas Colombiana de manera interactiva y accesible.
+
+Para más información y documentación detallada del proyecto, visita:  
+[docs.wearesorcol.com](https://docs.wearesorcol.com)
+
+**¡Únete a nosotros y sé parte de este cambio positivo!**
