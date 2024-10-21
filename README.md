@@ -1,6 +1,6 @@
 # SORCOL: Aprende Lengua de Señas Colombiana con Nosotros
 
-![Welcome Web Sorcol](/web/src/assets/WelcomeWeb.png)
+![Welcome Web Sorcol](src/assets/WelcomeWeb.png)
 
 Bienvenido a **SORCOL**, una plataforma web interactiva diseñada para enseñar la **Lengua de Señas Colombiana** (LSC). Nuestro objetivo es ofrecer un espacio accesible y amigable donde cualquier persona pueda aprender LSC a través de niveles estructurados. Cada nivel está compuesto por:
 
@@ -89,7 +89,7 @@ Para más información y documentación detallada del proyecto, visita:
 ### Flujo de Trabajo de Tareas en Jira
 En Jira, las tareas se gestionarán según el diagrama, lo que permite un seguimiento claro del estado de cada incidencia desde la creación hasta su finalización.
 
-![Diagrama de flujo de trabajo en Jira](/web/src/assets/flujoTrabajoJira.png)
+![Diagrama de flujo de trabajo en Jira](src/assets/flujoTrabajoJira.png)
 
 Para más información y documentación detallada del proyecto, visita:  
 [docs.wearesorcol.com](https://docs.wearesorcol.com)
