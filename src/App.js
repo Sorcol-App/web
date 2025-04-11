@@ -2,10 +2,11 @@ import './index.css'
 import { useState, useEffect } from 'react'
 import { supabase } from './supabaseClient'
 import { Routes, Route } from 'react-router-dom'
-import Auth from './Auth'
-import Account from './Account'
+import Home from './Routes/Home'
+import Auth from './Routes/Auth'
+import Profile from './Routes/Profile'
 
-export default function Home() {
+export default function App() {
   const [session, setSession] = useState(null)
 
   useEffect(() => {
@@ -22,11 +23,12 @@ export default function Home() {
     <div className="container" style={{ padding: '50px 0 100px 0' }}>
       {!session ? (
         <Routes>
-          <Route path="/" element={<Auth />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/auth" element={<Auth />} />
         </Routes>
       ) : (
         <Routes>
-          <Route path="/" element={<Account key={session.user.id} session={session} />} />
+          <Route path="/" element={<Profile key={session.user.id} session={session} />} />
         </Routes>
       )}
     </div>
